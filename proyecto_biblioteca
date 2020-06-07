@@ -1,0 +1,26 @@
+-> consulta  sql para sacar libros (no me sirve para lo que la quiero)
+
+	SELECT l.*, a.id as 'aut_id', a.autor, c.id as 'cat_id', c.categoria from categorias_autores_libros cal
+	inner join libros l on cal.libro_id = 1
+	inner join categorias c on cal.categoria_id = c.id
+	inner join autores a on cal.autor_id = a.id;
+
+	
+
+
+
+
+---------------------------------
+$libro = 'rojo';
+
+$cat = ['a','b'];
+
+$at = [1,2];
+
+
+foreach ($cat as $c) {
+	foreach ($at as $a) {
+		var_dump($libro,$a,$c);
+	}
+	echo '<br>';
+}
